@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.world-image {
+    background-image: url('world.png');
+    background-color: grey;
+    height: 650px;
+   /* background-position: center;*/
+   /* background-repeat: no-repeat;*/
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-content: center;
+    perspective: 1000px; 
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.card {
+    height: 150px;
+    width: 120px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d; 
+}
+
+/*.flex-item {
+    background-color: orchid;
+    border-radius: 25px;
+    height: 150px;
+}*/
+
+.front, .back {
+   height: 100%; 
+   width: 100%;
+   border-radius: 25px;
+   position: absolute;
+}
+
+.front {
+    background: linear-gradient(red, blue, green);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: linear-gradient(indigo, rgb(175, 22, 48), pink);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+div {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    color: #00FFE7;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+
+
+/*li:hover {
+    cursor: pointer;
+    margin-left: 50px;
+    background-color: blueviolet;
+}
+
+li:nth-child(3n) {
+    border-style: solid;
+  }
+
+li:nth-child(even) {
+    background-color: green;
+  }
+
+  .one:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: lightgreen;
+} */
+
